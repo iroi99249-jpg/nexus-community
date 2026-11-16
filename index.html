@@ -58,13 +58,57 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
 @media(max-width:720px){.hero:after{display:none}.join:before,.join:after{opacity:.6}.card:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.hero .pill,.hero h1,.hero .tag,.hero .lead,.hero .actions,.hero .stats,.hero:after,.join:before,.join:after{animation:none!important}.card .ico{transition:none}}
 
+
+/* NEXUS Discord verification */
+.auth-overlay{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:18px;background:#030713d9;backdrop-filter:blur(14px);overflow:auto}
+.auth-overlay[hidden]{display:none}
+.auth-panel{width:min(680px,100%);max-height:min(90vh,850px);overflow:auto;padding:clamp(22px,4vw,38px);border:1px solid #819dff66;border-radius:24px;background:linear-gradient(145deg,#1a2945,#0d1528);box-shadow:0 28px 100px #0009}
+.auth-panel h2{margin:8px 0 6px;font-size:clamp(25px,4vw,34px)}
+.auth-intro{color:var(--muted);font-size:13px;margin:0 0 22px}
+.auth-rules{display:grid;gap:10px;margin:20px 0}
+.auth-rule{display:flex;gap:13px;padding:14px;border:1px solid #ffffff1a;border-radius:14px;background:#ffffff08}
+.auth-rule b{display:block;font-size:13px}
+.auth-rule small{display:block;color:var(--muted);font-size:12px;line-height:1.65}
+.auth-rule .num{flex:0 0 27px}
+.auth-agree{display:flex;align-items:flex-start;gap:11px;padding:15px;border:1px solid #62e4df55;border-radius:14px;background:#62e4df0b;font-size:13px;cursor:pointer}
+.auth-agree input{width:18px;height:18px;accent-color:#62e4df;flex:0 0 auto;margin:2px 0 0}
+.auth-submit{width:100%;margin-top:16px;border:0;cursor:pointer;font:inherit}
+.auth-submit:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.auth-status{min-height:24px;margin:12px 0 0;font-size:13px;color:var(--muted)}
+.auth-status.error{color:#ff9caa}
+.auth-status.success{color:#78edc1}
+.auth-login{margin:12px 0 0;color:var(--muted);font-size:12px}
+@media(max-width:600px){.auth-overlay{padding:10px}.auth-panel{max-height:94vh;border-radius:18px;padding:20px}.auth-rule{padding:12px}}
+
 </style></head><body>
 <canvas id="particles"></canvas><header><div class="wrap nav"><a class="brand" href="#home"><span class="logo">✦</span>NEXUS</a><nav class="links"><a href="#about">ABOUT</a><a href="#community">COMMUNITY</a><a href="#rules">RULES</a><a href="#join">JOIN</a></nav><a class="btn" href="#join">参加する ↗</a></div></header>
 <main id="home"><section class="hero wrap"><div><div class="pill"><span class="dot"></span> EVERYONE IS WELCOME</div><h1>NEXUS</h1><div class="tag">Connect people. Create moments.</div><p class="lead">好きなことを話して、気の合う仲間を見つけて、自由に楽しもう。<br>NEXUSは、誰でも気軽に参加できるオープンなコミュニティです。</p><div class="actions"><a class="btn" href="#join">コミュニティに参加する →</a><a class="btn ghost" href="#about">NEXUSについて</a></div><div class="stats"><div class="stat"><b>24/7</b><small>いつでも交流</small></div><div class="stat"><b>FREE</b><small>参加無料</small></div><div class="stat"><b>ALL</b><small>誰でも歓迎</small></div></div></div></section>
 <section id="about"><div class="wrap"><div class="head"><div class="eyebrow">ABOUT NEXUS</div><h2>つながりが、ここから始まる。</h2><p>特別な目的がなくても大丈夫。気軽に遊びに来てください。</p></div><div class="cards"><article class="card"><div class="ico">💬</div><h3>自由に雑談</h3><p>日常の出来事、最近ハマっていること、何気ない話も大歓迎。</p></article><article class="card"><div class="ico">🎮</div><h3>ゲームで交流</h3><p>好きなゲームの話をしたり、一緒に遊ぶ仲間を見つけよう。</p></article><article class="card"><div class="ico">🎧</div><h3>気軽に通話</h3><p>作業通話やゲーム通話など、その日の気分で自由に参加。</p></article></div></div></section>
 <section id="community"><div class="wrap"><div class="head"><div class="eyebrow">COMMUNITY</div><h2>楽しみ方はいろいろ。</h2><p>自分に合った場所から参加してみよう。</p></div><div class="cards"><article class="card"><div class="ico">📣</div><h3>お知らせ・案内</h3><p>サーバーの最新情報や、最初に確認してほしい案内。</p></article><article class="card"><div class="ico">☕</div><h3>雑談・日常</h3><p>自由な話題でメンバーと交流するメインエリア。</p></article><article class="card"><div class="ico">🕹️</div><h3>ゲーム・趣味</h3><p>好きな作品や趣味を共有して、共通の話題を見つけよう。</p></article></div></div></section>
 <section id="rules"><div class="wrap"><div class="head"><div class="eyebrow">COMMUNITY GUIDELINES</div><h2>自由に楽しむためのルール。</h2><p>みんなが気持ちよく過ごせるように、ここだけ守ってね。</p></div><div class="rules"><div class="rule"><div class="num">01</div><div><strong>スパム・荒らし行為は禁止！</strong><small>同じ内容の3回以上の連投や、荒らし目的のアプリケーション使用は禁止。違反時はBANまたはタイムアウトの対象です。</small></div></div><div class="rule"><div class="num">02</div><div><strong>行き過ぎた暴言はNG！</strong><small>過度な暴言や攻撃的な発言は禁止。「4ね」などの発言は削除対象です。</small></div></div><div class="rule"><div class="num">03</div><div><strong>個人情報をばらさない！</strong><small>本名・住所などを本人の許可なく公開しないでください。本人の許可がある場合はOKです。</small></div></div><div class="rule"><div class="num">04</div><div><strong>招待は自由！</strong><small>友達や知り合いを自由に招待して、NEXUSの輪を広げましょう。</small></div></div><div class="rule"><div class="num">05</div><div><strong>みんなで楽しく！</strong><small>自由な交流を大切にしつつ、相手への思いやりも忘れずに。</small></div></div></div></div></section>
-<section id="join"><div class="wrap"><div class="join"><div class="eyebrow">YOUR PLACE TO CONNECT</div><h2>さあ、NEXUSへ。</h2><p>新しい出会いも、いつもの雑談も。ここから始めよう。</p><a class="btn" href="https://discord.gg/9EzC8hCFcT" target="_blank" rel="noopener">Discordサーバーに参加する ↗</a></div></div></section></main>
+<section id="join"><div class="wrap"><div class="join"><div class="eyebrow">YOUR PLACE TO CONNECT</div><h2>さあ、NEXUSへ。</h2><p>新しい出会いも、いつもの雑談も。ここから始めよう。</p><p class="note">すでにDiscordサーバーに参加している方は、認証とルール同意を完了してください。</p><a class="btn" href="https://fj8m4uk0po.apps.bot-hosting.cloud/oauth/login">Discord認証・ルール同意へ ↗</a><div style="height:10px"></div><a class="btn" href="https://discord.gg/9EzC8hCFcT" target="_blank" rel="noopener">Discordサーバーに参加する ↗</a></div></div></section></main>
+
+<div class="auth-overlay" id="nexus-consent" hidden>
+  <section class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <div class="eyebrow">NEXUS COMMUNITY · MEMBER VERIFICATION</div>
+    <h2 id="auth-title">参加ルールの確認</h2>
+    <p class="auth-intro">Discordアカウントの確認が完了しました。以下のルールを確認し、同意するとNEXUSの「オンライン」ロールが付与されます。</p>
+    <div class="auth-rules">
+      <div class="auth-rule"><span class="num">01</span><div><b>スパム・荒らし行為は禁止！</b><small>同じ内容の3回以上の連投や、荒らし目的のアプリケーション使用は禁止。違反時はBANまたはタイムアウトの対象です。</small></div></div>
+      <div class="auth-rule"><span class="num">02</span><div><b>行き過ぎた暴言はNG！</b><small>過度な暴言や攻撃的な発言は禁止。「4ね」などの発言は削除対象です。</small></div></div>
+      <div class="auth-rule"><span class="num">03</span><div><b>個人情報をばらさない！</b><small>本名・住所などを本人の許可なく公開しないでください。本人の許可がある場合はOKです。</small></div></div>
+      <div class="auth-rule"><span class="num">04</span><div><b>招待は自由！</b><small>友達や知り合いを自由に招待して、NEXUSの輪を広げましょう。</small></div></div>
+      <div class="auth-rule"><span class="num">05</span><div><b>みんなで楽しく！</b><small>自由な交流を大切にしつつ、相手への思いやりも忘れずに。</small></div></div>
+    </div>
+    <form id="nexus-consent-form">
+      <label class="auth-agree"><input id="nexus-agree" type="checkbox"><span>上記5つのルールを読み、内容に同意します。</span></label>
+      <button class="btn auth-submit" id="nexus-submit" type="submit" disabled>同意して認証を完了する</button>
+      <p class="auth-status" id="nexus-auth-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="auth-login">同意すると、Discordサーバーの「オンライン」ロールが付与されます。</p>
+  </section>
+</div>
+
 <footer><div class="wrap foot"><span>© 2026 NEXUS COMMUNITY</span><span>Connect people. Create moments.</span></div></footer>
 <script>
 (()=> {
@@ -176,6 +220,68 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
   },{passive:true});
   el.addEventListener('pointerleave',()=>{el.style.transform='';},{passive:true});
  });
+})();
+</script>
+
+
+<script>
+(()=> {
+  const params = new URLSearchParams(window.location.search);
+  const ticket = params.get('nexus_ticket');
+  if (!ticket) return;
+
+  // Ticketを履歴・アドレスバーから速やかに取り除く
+  params.delete('nexus_ticket');
+  const cleanQuery = params.toString();
+  history.replaceState(null, '', window.location.pathname + (cleanQuery ? '?' + cleanQuery : '') + window.location.hash);
+
+  const overlay = document.getElementById('nexus-consent');
+  const form = document.getElementById('nexus-consent-form');
+  const agree = document.getElementById('nexus-agree');
+  const submit = document.getElementById('nexus-submit');
+  const status = document.getElementById('nexus-auth-status');
+  if (!overlay || !form || !agree || !submit || !status) return;
+
+  overlay.hidden = false;
+  document.body.style.overflow = 'hidden';
+  agree.addEventListener('change', () => { submit.disabled = !agree.checked; });
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!agree.checked || submit.disabled) return;
+    submit.disabled = true;
+    submit.textContent = '認証処理中…';
+    status.className = 'auth-status';
+    status.textContent = 'Discordサーバーに確認しています。少しお待ちください。';
+
+    try {
+      const response = await fetch('https://fj8m4uk0po.apps.bot-hosting.cloud/api/consent', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ticket, agreed: true}),
+        cache: 'no-store',
+        credentials: 'omit'
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok !== true) {
+        throw new Error(result.error || result.message || '認証に失敗しました。Discordログインからやり直してください。');
+      }
+
+      status.className = 'auth-status success';
+      status.textContent = result.message || '認証が完了しました。NEXUSへようこそ！';
+      submit.textContent = '認証完了';
+      submit.disabled = true;
+      const done = document.createElement('p');
+      done.className = 'auth-status success';
+      done.textContent = 'この画面を閉じて、Discordサーバーをご確認ください。';
+      form.appendChild(done);
+    } catch (error) {
+      status.className = 'auth-status error';
+      status.textContent = error.message || '通信に失敗しました。時間をおいて再度お試しください。';
+      submit.textContent = 'もう一度試す';
+      submit.disabled = !agree.checked;
+    }
+  });
 })();
 </script>
 
