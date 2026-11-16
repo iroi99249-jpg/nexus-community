@@ -2,6 +2,36 @@
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080d1b"><title>NEXUS COMMUNITY</title>
 <style>
 :root{--bg:#080d1b;--panel:#131e34;--text:#f5f7ff;--muted:#aab6d0;--cyan:#62e4df;--blue:#819dff;--violet:#a58aff}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#304d982c,transparent 38%),radial-gradient(ellipse at 90% 40%,#744bb01c,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,"Noto Sans JP",sans-serif;line-height:1.7;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}header{position:sticky;top:0;z-index:5;background:#080d1bdd;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff18}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:950;letter-spacing:2px;display:flex;align-items:center;gap:12px}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan),var(--violet));display:grid;place-items:center;color:#08101d;font-size:22px;box-shadow:0 0 30px #819dff55}.links{display:flex;gap:25px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:1px}.links a:hover{color:white}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:13px;background:linear-gradient(105deg,#819dff,#69e0df);color:#08101d;font-size:13px;font-weight:900;box-shadow:0 9px 30px #719bff35;transition:.2s}.btn:hover{transform:translateY(-3px);filter:brightness(1.1)}.ghost{background:#ffffff0b;color:white;border:1px solid #ffffff22;box-shadow:none}.hero{min-height:680px;display:grid;place-items:center;text-align:center;padding:90px 0;position:relative}.hero:before{content:"";position:absolute;width:min(800px,95vw);height:460px;background:radial-gradient(ellipse,#718fff27,transparent 68%);filter:blur(12px);animation:glow 7s ease-in-out infinite alternate}@keyframes glow{to{transform:scale(1.15);opacity:.6}}.hero>div{position:relative}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #819dff55;border-radius:99px;padding:7px 14px;color:#d8e0ff;background:#819dff0d;font-size:11px;letter-spacing:2px;font-weight:900}.dot{width:8px;height:8px;border-radius:50%;background:#64e6b8;box-shadow:0 0 12px #64e6b8}h1{font-size:clamp(76px,14vw,145px);line-height:1;margin:30px 0 12px;letter-spacing:.06em;font-weight:1000;background:linear-gradient(100deg,#b8c6ff,#69e4e2 50%,#c2a5ff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 60px #819dff22}.tag{letter-spacing:4px;font-weight:850;color:#e2eaff}.lead{max-width:660px;margin:25px auto 30px;color:var(--muted);font-size:15px;line-height:2}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.stats{display:flex;justify-content:center;gap:12px;margin-top:58px;flex-wrap:wrap}.stat{min-width:145px;padding:15px 22px;border:1px solid #ffffff1a;border-radius:16px;background:#ffffff08;backdrop-filter:blur(10px)}.stat b{display:block;font-size:23px;color:#a8dfff}.stat small{color:var(--muted);font-size:10px;letter-spacing:1px}section{padding:78px 0}.head{text-align:center;margin-bottom:35px}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--cyan);font-weight:950}h2{font-size:clamp(27px,4vw,39px);margin:8px 0}.head p{color:var(--muted);font-size:14px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:26px;border:1px solid #ffffff18;border-radius:20px;background:linear-gradient(145deg,#1a2945,#10192c);transition:.25s;box-shadow:0 15px 40px #0002}.card:hover{transform:translateY(-7px);border-color:#85baff77;box-shadow:0 22px 50px #0004}.ico{width:49px;height:49px;border-radius:15px;background:linear-gradient(135deg,#819dff35,#62e4df2b);display:grid;place-items:center;font-size:22px;margin-bottom:16px}.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}.rules{display:grid;grid-template-columns:1fr 1fr;gap:13px}.rule{display:flex;gap:15px;padding:19px;border:1px solid #ffffff18;border-radius:16px;background:#ffffff08}.num{color:var(--cyan);font-weight:950;font-size:18px}.rule strong{display:block;font-size:14px}.rule small{color:var(--muted);font-size:12px}.join{padding:55px 22px;text-align:center;border:1px solid #819dff55;border-radius:26px;background:radial-gradient(ellipse at 50% 0%,#718fff32,transparent 65%),#14213a;box-shadow:0 20px 70px #526eff20}.join h2{font-size:clamp(30px,5vw,43px)}.join p{color:var(--muted);font-size:14px}.note{font-size:10px!important}footer{padding:28px 0;border-top:1px solid #ffffff18;color:#8996b3;font-size:11px}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}#particles{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.55}@media(max-width:720px){.links{display:none}.hero{min-height:610px}.cards{grid-template-columns:1fr}.rules{grid-template-columns:1fr}section{padding:58px 0}.stat{min-width:calc(33.33% - 9px);padding:12px 5px}.stat b{font-size:18px}.stat small{font-size:9px}.tag{letter-spacing:2px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* NEXUS motion layer */
+:root{--pointer-x:50vw;--pointer-y:50vh}
+body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(360px circle at var(--pointer-x) var(--pointer-y),rgba(98,228,223,.075),transparent 68%);opacity:0;transition:opacity .35s ease}
+body.motion-ready:after{opacity:1}
+header,main,footer{position:relative;z-index:1}
+.logo{animation:logo-breathe 4.5s ease-in-out infinite}
+h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite alternate}
+.hero:before{animation:hero-pulse 8s ease-in-out infinite alternate}
+.card,.rule,.stat,.btn{will-change:transform}
+.card,.rule{transform-style:preserve-3d}
+.card:hover{transform:translateY(-8px) scale(1.012)}
+.rule{transition:transform .28s ease,border-color .28s ease,background .28s ease}
+.rule:hover{transform:translateX(4px);border-color:#62e4df66;background:#62e4df0c}
+.stat{transition:transform .3s ease,border-color .3s ease,background .3s ease}
+.stat:hover{transform:translateY(-5px);border-color:#819dff66;background:#819dff12}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn:before{content:"";position:absolute;inset:-1px;background:linear-gradient(110deg,transparent 20%,#ffffff70 48%,transparent 72%);transform:translateX(-130%);transition:transform .65s ease;z-index:-1}
+.btn:hover:before{transform:translateX(130%)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-stagger>*{transition-delay:var(--reveal-delay,0ms)}
+.ripple{position:absolute;border-radius:50%;background:#ffffff65;transform:scale(0);animation:ripple-out .65s ease-out forwards;pointer-events:none}
+@keyframes ripple-out{to{transform:scale(1);opacity:0}}
+@keyframes logo-breathe{0%,100%{box-shadow:0 0 22px #819dff44;filter:saturate(1)}50%{box-shadow:0 0 34px #62e4df77;filter:saturate(1.25)}}
+@keyframes title-flow{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes hero-pulse{from{transform:scale(.96);opacity:.65}to{transform:scale(1.08);opacity:1}}
+@media(max-width:720px){body:after{display:none}.reveal{transform:translateY(14px);transition-duration:.55s}.card:hover,.stat:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){body:after{display:none}.logo,h1,.hero:before{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.btn:before{display:none}.ripple{display:none}}
+
 </style></head><body>
 <canvas id="particles"></canvas><header><div class="wrap nav"><a class="brand" href="#home"><span class="logo">✦</span>NEXUS</a><nav class="links"><a href="#about">ABOUT</a><a href="#community">COMMUNITY</a><a href="#rules">RULES</a><a href="#join">JOIN</a></nav><a class="btn" href="#join">参加する ↗</a></div></header>
 <main id="home"><section class="hero wrap"><div><div class="pill"><span class="dot"></span> EVERYONE IS WELCOME</div><h1>NEXUS</h1><div class="tag">Connect people. Create moments.</div><p class="lead">好きなことを話して、気の合う仲間を見つけて、自由に楽しもう。<br>NEXUSは、誰でも気軽に参加できるオープンなコミュニティです。</p><div class="actions"><a class="btn" href="#join">コミュニティに参加する →</a><a class="btn ghost" href="#about">NEXUSについて</a></div><div class="stats"><div class="stat"><b>24/7</b><small>いつでも交流</small></div><div class="stat"><b>FREE</b><small>参加無料</small></div><div class="stat"><b>ALL</b><small>誰でも歓迎</small></div></div></div></section>
@@ -10,4 +40,60 @@
 <section id="rules"><div class="wrap"><div class="head"><div class="eyebrow">COMMUNITY GUIDELINES</div><h2>自由に楽しむためのルール。</h2><p>みんなが気持ちよく過ごせるように、ここだけ守ってね。</p></div><div class="rules"><div class="rule"><div class="num">01</div><div><strong>スパム・荒らし行為は禁止！</strong><small>同じ内容の3回以上の連投や、荒らし目的のアプリケーション使用は禁止。違反時はBANまたはタイムアウトの対象です。</small></div></div><div class="rule"><div class="num">02</div><div><strong>行き過ぎた暴言はNG！</strong><small>過度な暴言や攻撃的な発言は禁止。「4ね」などの発言は削除対象です。</small></div></div><div class="rule"><div class="num">03</div><div><strong>個人情報をばらさない！</strong><small>本名・住所などを本人の許可なく公開しないでください。本人の許可がある場合はOKです。</small></div></div><div class="rule"><div class="num">04</div><div><strong>招待は自由！</strong><small>友達や知り合いを自由に招待して、NEXUSの輪を広げましょう。</small></div></div><div class="rule"><div class="num">05</div><div><strong>みんなで楽しく！</strong><small>自由な交流を大切にしつつ、相手への思いやりも忘れずに。</small></div></div></div></div></section>
 <section id="join"><div class="wrap"><div class="join"><div class="eyebrow">YOUR PLACE TO CONNECT</div><h2>さあ、NEXUSへ。</h2><p>新しい出会いも、いつもの雑談も。ここから始めよう。</p><a class="btn" href="https://discord.gg/9EzC8hCFcT" target="_blank" rel="noopener">Discordサーバーに参加する ↗</a></div></div></section></main>
 <footer><div class="wrap foot"><span>© 2026 NEXUS COMMUNITY</span><span>Connect people. Create moments.</span></div></footer>
-<script>(()=>{const c=document.getElementById('particles'),x=c.getContext('2d');let w,h,p=[];function size(){w=innerWidth;h=innerHeight;let d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);p=Array.from({length:Math.min(70,Math.floor(w/18))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.5+.5}))}function draw(){x.clearRect(0,0,w,h);p.forEach((a,i)=>{a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fillStyle='#91baffaa';x.fill();for(let j=i+1;j<p.length;j++){let b=p[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(110,170,255,'+(1-d/110)*.12+')';x.stroke()}}});requestAnimationFrame(draw)}size();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)draw();addEventListener('resize',size)})();</script></body></html>
+<script>(()=>{const c=document.getElementById('particles'),x=c.getContext('2d');let w,h,p=[];function size(){w=innerWidth;h=innerHeight;let d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);p=Array.from({length:Math.min(70,Math.floor(w/18))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.5+.5}))}function draw(){x.clearRect(0,0,w,h);p.forEach((a,i)=>{a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fillStyle='#91baffaa';x.fill();for(let j=i+1;j<p.length;j++){let b=p[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(110,170,255,'+(1-d/110)*.12+')';x.stroke()}}});requestAnimationFrame(draw)}size();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)draw();addEventListener('resize',size)})();</script>
+<script>
+(()=> {
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll('.hero > div,.head,.card,.rule,.join,.stats');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -35px 0px'});
+    revealTargets.forEach((el, i) => {
+      el.classList.add('reveal');
+      if (el.classList.contains('cards') || el.classList.contains('rules')) {
+        el.classList.add('reveal-stagger');
+        [...el.children].forEach((child, n) => child.style.setProperty('--reveal-delay', (n * 85) + 'ms'));
+      }
+      observer.observe(el);
+    });
+  } else {
+    revealTargets.forEach(el => el.classList.add('is-visible'));
+  }
+  if (!reduce && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.body.classList.add('motion-ready');
+    let queued = false;
+    window.addEventListener('pointermove', e => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--pointer-x', e.clientX + 'px');
+        document.documentElement.style.setProperty('--pointer-y', e.clientY + 'px');
+        queued = false;
+      });
+    }, {passive:true});
+  }
+  if (!reduce) {
+    document.addEventListener('click', e => {
+      const button = e.target.closest('.btn');
+      if (!button) return;
+      const rect = button.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height) * 1.5;
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      button.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove(), {once:true});
+    });
+  }
+})();
+</script>
+
+</body></html>
