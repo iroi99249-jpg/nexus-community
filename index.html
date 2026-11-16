@@ -92,7 +92,7 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
    ctx.fillStyle='rgba(139,205,255,.72)';ctx.fill();
    for(let j=i+1;j<points.length;j++){
     const b=points[j],dx=a.x-b.x,dy=a.y-b.y,dist=Math.hypot(dx,dy);
-    if(dist<mobile?82:118){
+    if(dist<(mobile?82:118)){
      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
      ctx.strokeStyle='rgba(105,190,255,'+((1-dist/(mobile?82:118))*.13)+')';ctx.lineWidth=.7;ctx.stroke();
     }
