@@ -32,6 +32,32 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
 @media(max-width:720px){body:after{display:none}.reveal{transform:translateY(14px);transition-duration:.55s}.card:hover,.stat:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){body:after{display:none}.logo,h1,.hero:before{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.btn:before{display:none}.ripple{display:none}}
 
+
+/* NEXUS immersive motion upgrade */
+.hero .pill{animation:hero-rise .8s .05s both cubic-bezier(.2,.8,.2,1)}
+.hero h1{animation:hero-rise 1s .18s both cubic-bezier(.2,.8,.2,1),title-flow 8s 1.2s ease-in-out infinite alternate}
+.hero .tag{animation:hero-rise .85s .32s both}
+.hero .lead{animation:hero-rise .85s .44s both}
+.hero .actions{animation:hero-rise .85s .56s both}
+.hero .stats{animation:hero-rise .85s .7s both}
+.hero:after{content:"";position:absolute;inset:8% 4%;pointer-events:none;background:linear-gradient(115deg,transparent 0%,#8beaff0a 42%,#8beaff20 50%,#8beaff0a 58%,transparent 100%);transform:translateX(-120%);animation:hero-scan 9s 1.2s ease-in-out infinite;mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent)}
+.card,.stat,.rule{transform-style:preserve-3d;transition:transform .32s cubic-bezier(.2,.75,.2,1),border-color .3s,box-shadow .3s}
+.card:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:linear-gradient(125deg,#ffffff12,transparent 45%);transition:opacity .3s}
+.card{position:relative;overflow:hidden}
+.card:hover:after{opacity:1}
+.card .ico{transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .35s}
+.card:hover .ico{transform:translateY(-3px) rotate(-5deg) scale(1.08);filter:drop-shadow(0 0 10px #62e4df55)}
+.join{position:relative;overflow:hidden}
+.join:before{content:"";position:absolute;width:240px;height:240px;left:-120px;top:-150px;border-radius:50%;background:#62e4df22;filter:blur(28px);animation:orb-drift 10s ease-in-out infinite alternate}
+.join:after{content:"";position:absolute;width:220px;height:220px;right:-110px;bottom:-160px;border-radius:50%;background:#819dff25;filter:blur(30px);animation:orb-drift 12s ease-in-out infinite alternate-reverse}
+.join>*{position:relative;z-index:1}
+#particles{opacity:.72}
+@keyframes hero-rise{from{opacity:0;transform:translateY(22px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes hero-scan{0%,30%{transform:translateX(-120%);opacity:0}45%{opacity:1}70%,100%{transform:translateX(120%);opacity:0}}
+@keyframes orb-drift{from{transform:translate3d(0,0,0) scale(.9)}to{transform:translate3d(35px,22px,0) scale(1.2)}}
+@media(max-width:720px){.hero:after{display:none}.join:before,.join:after{opacity:.6}.card:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero .pill,.hero h1,.hero .tag,.hero .lead,.hero .actions,.hero .stats,.hero:after,.join:before,.join:after{animation:none!important}.card .ico{transition:none}}
+
 </style></head><body>
 <canvas id="particles"></canvas><header><div class="wrap nav"><a class="brand" href="#home"><span class="logo">✦</span>NEXUS</a><nav class="links"><a href="#about">ABOUT</a><a href="#community">COMMUNITY</a><a href="#rules">RULES</a><a href="#join">JOIN</a></nav><a class="btn" href="#join">参加する ↗</a></div></header>
 <main id="home"><section class="hero wrap"><div><div class="pill"><span class="dot"></span> EVERYONE IS WELCOME</div><h1>NEXUS</h1><div class="tag">Connect people. Create moments.</div><p class="lead">好きなことを話して、気の合う仲間を見つけて、自由に楽しもう。<br>NEXUSは、誰でも気軽に参加できるオープンなコミュニティです。</p><div class="actions"><a class="btn" href="#join">コミュニティに参加する →</a><a class="btn ghost" href="#about">NEXUSについて</a></div><div class="stats"><div class="stat"><b>24/7</b><small>いつでも交流</small></div><div class="stat"><b>FREE</b><small>参加無料</small></div><div class="stat"><b>ALL</b><small>誰でも歓迎</small></div></div></div></section>
@@ -40,7 +66,47 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
 <section id="rules"><div class="wrap"><div class="head"><div class="eyebrow">COMMUNITY GUIDELINES</div><h2>自由に楽しむためのルール。</h2><p>みんなが気持ちよく過ごせるように、ここだけ守ってね。</p></div><div class="rules"><div class="rule"><div class="num">01</div><div><strong>スパム・荒らし行為は禁止！</strong><small>同じ内容の3回以上の連投や、荒らし目的のアプリケーション使用は禁止。違反時はBANまたはタイムアウトの対象です。</small></div></div><div class="rule"><div class="num">02</div><div><strong>行き過ぎた暴言はNG！</strong><small>過度な暴言や攻撃的な発言は禁止。「4ね」などの発言は削除対象です。</small></div></div><div class="rule"><div class="num">03</div><div><strong>個人情報をばらさない！</strong><small>本名・住所などを本人の許可なく公開しないでください。本人の許可がある場合はOKです。</small></div></div><div class="rule"><div class="num">04</div><div><strong>招待は自由！</strong><small>友達や知り合いを自由に招待して、NEXUSの輪を広げましょう。</small></div></div><div class="rule"><div class="num">05</div><div><strong>みんなで楽しく！</strong><small>自由な交流を大切にしつつ、相手への思いやりも忘れずに。</small></div></div></div></div></section>
 <section id="join"><div class="wrap"><div class="join"><div class="eyebrow">YOUR PLACE TO CONNECT</div><h2>さあ、NEXUSへ。</h2><p>新しい出会いも、いつもの雑談も。ここから始めよう。</p><a class="btn" href="https://discord.gg/9EzC8hCFcT" target="_blank" rel="noopener">Discordサーバーに参加する ↗</a></div></div></section></main>
 <footer><div class="wrap foot"><span>© 2026 NEXUS COMMUNITY</span><span>Connect people. Create moments.</span></div></footer>
-<script>(()=>{const c=document.getElementById('particles'),x=c.getContext('2d');let w,h,p=[];function size(){w=innerWidth;h=innerHeight;let d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);p=Array.from({length:Math.min(70,Math.floor(w/18))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.5+.5}))}function draw(){x.clearRect(0,0,w,h);p.forEach((a,i)=>{a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fillStyle='#91baffaa';x.fill();for(let j=i+1;j<p.length;j++){let b=p[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(110,170,255,'+(1-d/110)*.12+')';x.stroke()}}});requestAnimationFrame(draw)}size();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)draw();addEventListener('resize',size)})();</script>
+<script>
+(()=> {
+ const canvas=document.getElementById('particles');
+ if(!canvas) return;
+ const ctx=canvas.getContext('2d',{alpha:true});
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const mobile=window.matchMedia('(max-width: 720px)').matches;
+ let w=0,h=0,raf=0,points=[],last=0;
+ const count=()=>Math.min(mobile?24:58,Math.max(14,Math.floor(innerWidth/(mobile?19:17))));
+ function resize(){
+  const d=Math.min(devicePixelRatio||1,1.5);
+  w=innerWidth;h=innerHeight;canvas.width=Math.round(w*d);canvas.height=Math.round(h*d);
+  ctx.setTransform(d,0,0,d,0,0);
+  points=Array.from({length:count()},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.25+.45,phase:Math.random()*6.28}));
+ }
+ function frame(t){
+  raf=0;if(document.hidden||reduce)return;
+  if(t-last<32){raf=requestAnimationFrame(frame);return}last=t;
+  ctx.clearRect(0,0,w,h);
+  for(let i=0;i<points.length;i++){
+   const a=points[i];a.x+=a.vx;a.y+=a.vy;a.phase+=.012;
+   if(a.x<-5)a.x=w+5;if(a.x>w+5)a.x=-5;if(a.y<-5)a.y=h+5;if(a.y>h+5)a.y=-5;
+   ctx.beginPath();ctx.arc(a.x,a.y,a.r+Math.sin(a.phase)*.22,0,Math.PI*2);
+   ctx.fillStyle='rgba(139,205,255,.72)';ctx.fill();
+   for(let j=i+1;j<points.length;j++){
+    const b=points[j],dx=a.x-b.x,dy=a.y-b.y,dist=Math.hypot(dx,dy);
+    if(dist<mobile?82:118){
+     ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+     ctx.strokeStyle='rgba(105,190,255,'+((1-dist/(mobile?82:118))*.13)+')';ctx.lineWidth=.7;ctx.stroke();
+    }
+   }
+  }
+  raf=requestAnimationFrame(frame);
+ }
+ function start(){if(!reduce&&!document.hidden&&!raf)raf=requestAnimationFrame(frame)}
+ function stop(){if(raf){cancelAnimationFrame(raf);raf=0}}
+ resize();start();
+ addEventListener('resize',()=>{resize();start()},{passive:true});
+ document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+})();
+</script>
 <script>
 (()=> {
   const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -54,11 +120,12 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
         }
       });
     }, {threshold: 0.12, rootMargin: '0px 0px -35px 0px'});
-    revealTargets.forEach((el, i) => {
+    revealTargets.forEach((el) => {
       el.classList.add('reveal');
-      if (el.classList.contains('cards') || el.classList.contains('rules')) {
-        el.classList.add('reveal-stagger');
-        [...el.children].forEach((child, n) => child.style.setProperty('--reveal-delay', (n * 85) + 'ms'));
+      const siblings = el.parentElement ? [...el.parentElement.children] : [];
+      const index = siblings.indexOf(el);
+      if (index >= 0 && (el.classList.contains('card') || el.classList.contains('rule'))) {
+        el.style.transitionDelay = (index * 90) + 'ms';
       }
       observer.observe(el);
     });
@@ -93,6 +160,22 @@ h1{background-size:200% 100%;animation:title-flow 8s ease-in-out infinite altern
       ripple.addEventListener('animationend', () => ripple.remove(), {once:true});
     });
   }
+})();
+</script>
+
+
+<script>
+(()=> {
+ const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(!fine||reduce)return;
+ document.querySelectorAll('.card,.stat').forEach(el=>{
+  el.addEventListener('pointermove',e=>{
+   const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+   el.style.transform='perspective(850px) rotateX('+(-y*3.2)+'deg) rotateY('+(x*3.2)+'deg) translateY(-5px)';
+  },{passive:true});
+  el.addEventListener('pointerleave',()=>{el.style.transform='';},{passive:true});
+ });
 })();
 </script>
 
